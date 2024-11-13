@@ -84,12 +84,9 @@
             border-radius: 12px;
         }
 
-        /* Estilo para o Spotify no canto superior direito */
+        /* Estilo para o Spotify no canto inferior */
         .spotify-container {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            z-index: 10;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -100,7 +97,12 @@
         </div>
         
         <h2 class="subtitle">Saída: Brasília - 27 de Dezembro</h2>
-        
+
+        <!-- Playlist do Spotify abaixo de "Saída: Brasília" -->
+        <div class="spotify-container">
+            <iframe src="https://open.spotify.com/embed/playlist/23O5idrZf3fjjEYYEs53e3?utm_source=generator&theme=0" width="300" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+
         <div class="section">
             <h3>Cronômetro até a Partida</h3>
             <div class="timer" id="countdown">Carregando...</div>
@@ -122,14 +124,9 @@
             <p>Roteiro: Saída de Brasília no dia 27 de Dezembro pela manhã. Chegada estimada em Ilhéus no dia seguinte, para aproveitar dias de praia e relaxamento!</p>
         </div>
 
-        <!-- Mapa abaixo de "Destino Final" com redução de tamanho em 25% -->
+        <!-- Mapa com a rota ajustada, agora com link do Google Maps -->
         <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=...G3HRMvFKmJ22dfme8" width="75%" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-        </div>
-
-        <!-- Playlist do Spotify no canto superior direito -->
-        <div class="spotify-container">
-            <iframe src="https://open.spotify.com/embed/playlist/23O5idrZf3fjjEYYEs53e3?utm_source=generator&theme=0" width="300" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=...PzLPTZYnGN6ecDoPA" width="75%" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
     </div>
 
