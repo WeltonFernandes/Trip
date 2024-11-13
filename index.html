@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             background-color: #f0f8ff;
         }
@@ -23,11 +23,12 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             overflow: hidden;
             text-align: center;
+            padding-top: 20px;
         }
 
         /* Banner com imagem de fundo */
         .banner {
-            background-image: url('https://acrosstheuniverse.blog.br/wp-content/uploads/2020/02/Praia-em-Ilhe%CC%81us.jpg'); /* URL de uma imagem de estrada/praia */
+            background-image: url('https://acrosstheuniverse.blog.br/wp-content/uploads/2020/02/Praia-em-Ilhe%CC%81us.jpg');
             background-size: cover;
             background-position: center;
             padding: 50px 20px;
@@ -48,7 +49,7 @@
             font-size: 1.5em;
             font-weight: bold;
             color: #2e8b57;
-            background-image: url('https://example.com/praia.jpg'); /* URL de uma imagem de praia */
+            background-image: url('https://example.com/praia.jpg');
             background-size: cover;
             background-position: center;
             padding: 20px;
@@ -71,6 +72,30 @@
             font-size: 1.3em;
             color: #2e8b57;
         }
+
+        /* Posicionando o mapa no canto superior esquerdo */
+        #map-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 300px;
+            height: 250px;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Posicionando o iframe da playlist no canto superior direito */
+        #playlist-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 300px;
+            height: 352px;
+            border-radius: 12px;
+            border: 2px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 <body>
@@ -80,11 +105,15 @@
         </div>
         
         <h2 class="subtitle">Saída: Brasília - 27 de Dezembro</h2>
-        
-        <!-- Inserir o iframe do Spotify aqui -->
-        <div class="section">
-            <h3>Playlist para a Viagem</h3>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/23O5idrZf3fjjEYYEs53e3?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+        <!-- Mapa do Google Maps no canto superior esquerdo -->
+        <div id="map-container">
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=2WV9GQ4FrCxWRv3MA" width="100%" height="100%"></iframe>
+        </div>
+
+        <!-- Playlist do Spotify no canto superior direito -->
+        <div id="playlist-container">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/23O5idrZf3fjjEYYEs53e3?utm_source=generator&theme=0" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
 
         <div class="section">
@@ -95,7 +124,7 @@
         <div class="section">
             <h3>Participantes da Viagem</h3>
             <p class="list-item">Welton <span class="heart">❤️</span> Roberta</p>
-            <p class="list-item">Gaby <span class="heart">❤️</span> Fernandão</p>
+            <p class="list-item">Chatinha <span class="heart">❤️</span> Fernandão</p>
         </div>
 
         <div class="section">
