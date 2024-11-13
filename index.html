@@ -48,6 +48,9 @@
             font-size: 1.5em;
             font-weight: bold;
             color: #2e8b57;
+            background-image: url('https://example.com/praia.jpg'); /* URL de uma imagem de praia */
+            background-size: cover;
+            background-position: center;
             padding: 20px;
             border-radius: 10px;
             color: white;
@@ -68,18 +71,6 @@
             font-size: 1.3em;
             color: #2e8b57;
         }
-
-        /* Estilo para o mapa */
-        .map-container {
-            margin: 20px 0;
-            height: 300px;
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: 10px;
-        }
     </style>
 </head>
 <body>
@@ -90,6 +81,12 @@
         
         <h2 class="subtitle">Saída: Brasília - 27 de Dezembro</h2>
         
+        <!-- Inserir o iframe do Spotify aqui -->
+        <div class="section">
+            <h3>Playlist para a Viagem</h3>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/23O5idrZf3fjjEYYEs53e3?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+
         <div class="section">
             <h3>Cronômetro até a Partida</h3>
             <div class="timer" id="countdown">Carregando...</div>
@@ -98,7 +95,7 @@
         <div class="section">
             <h3>Participantes da Viagem</h3>
             <p class="list-item">Welton <span class="heart">❤️</span> Roberta</p>
-            <p class="list-item">Di menor <span class="heart">❤️</span> Fernandão</p>
+            <p class="list-item">Gaby <span class="heart">❤️</span> Fernandão</p>
         </div>
 
         <div class="section">
@@ -109,18 +106,6 @@
         <div class="section">
             <h3>Informações Extras</h3>
             <p>Roteiro: Saída de Brasília no dia 27 de Dezembro pela manhã. Chegada estimada em Ilhéus no dia seguinte, para aproveitar dias de praia e relaxamento!</p>
-        </div>
-
-        <!-- Mapa Interativo da Rota -->
-        <div class="section">
-            <h3>Mapa da Rota</h3>
-            <div class="map-container">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224636.26152077386!2d-49.26872349140874!3d-15.780748471953314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dfb21fbb944af9%3A0x69e105a771f5c3f4!2sBras%C3%ADlia%2C%20DF!5e0!3m2!1spt-BR!2sbr!4v1699364793251!5m2!1spt-BR!2sbr" 
-                    allowfullscreen="" 
-                    loading="lazy">
-                </iframe>
-            </div>
         </div>
     </div>
 
@@ -145,8 +130,10 @@
             }
         }
 
+        // Atualize o cronômetro imediatamente ao carregar a página
         atualizarCronometro();
 
+        // Depois disso, continue atualizando a cada segundo
         const intervalo = setInterval(atualizarCronometro, 1000);
     </script>
 </body>
