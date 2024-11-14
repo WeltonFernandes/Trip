@@ -5,107 +5,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viagem para Ilhéus</title>
     <style>
+        /* Estilos para a página */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f8ff;
+        }
+        .container {
+            width: 90%;
+            max-width: 600px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
             text-align: center;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
+        /* Banner com imagem de fundo */
         .banner {
-            background-image: url('https://acrosstheuniverse.blog.br/wp-content/uploads/2020/02/Praia-em-Ilhe%CC%81us.jpg');
+            background-image: url('https://acrosstheuniverse.blog.br/wp-content/uploads/2020/02/Praia-em-Ilhe%CC%81us.jpg'); /* URL de uma imagem de estrada/praia */
             background-size: cover;
             background-position: center;
-            padding: 60px;
+            padding: 50px 20px;
             color: white;
         }
-
         .banner h1 {
-            font-size: 2.5em;
-            font-weight: bold;
+            font-size: 1.8em;
+            margin: 0;
+            color: #ffffff;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
         }
 
-        h2, h3 {
+        /* Seção de cronômetro */
+        .section {
+            padding: 20px;
+        }
+        .timer {
             font-size: 1.5em;
-            margin-top: 20px;
-        }
-
-        .countdown {
-            font-size: 1.2em;
             font-weight: bold;
-            color: green;
-            margin-top: 20px;
+            color: #2e8b57;
+            background-image: url('https://example.com/praia.jpg'); /* URL de uma imagem de praia */
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
         }
 
-        iframe {
+        /* Estilo para lista de participantes */
+        .list-item {
+            font-size: 1.1em;
+            margin: 5px 0;
+        }
+        .heart {
+            color: red;
+        }
+
+        /* Fundo e espaçamento para outras seções */
+        .section h3 {
+            font-size: 1.3em;
+            color: #2e8b57;
+        }
+
+        /* Ajustes para o mapa e playlist */
+        .media-section {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .media-section iframe {
             border-radius: 12px;
-            margin-top: 20px;
-        }
-
-        .tasks {
-            text-align: left;
-            margin-top: 30px;
-            padding-left: 20px;
-        }
-
-        .tasks input {
-            margin-right: 10px;
-        }
-
-        .map-container {
-            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Banner -->
         <div class="banner">
             <h1>🌞 Aêêê, Caramba! A grande viagem tá chegando! 🚗🌴</h1>
         </div>
-
-        <!-- Saída e cronômetro -->
-        <h2>Saída: Brasília - 27 de Dezembro</h2>
-        <div class="countdown" id="countdown">Carregando...</div>
-
-        <!-- Participantes -->
-        <h3>Participantes da Viagem</h3>
-        <p>Welton ❤️ Roberta</p>
-        <p>Chatinha ❤️ Fernandão</p>
-
-        <!-- Destino -->
-        <h3>Destino Final</h3>
-        <p>Ilhéus, Bahia - Praia, Sol e Diversão!</p>
-
-        <!-- Lista de atividades -->
-        <h3>Lista de Atividades de Viagem 📋</h3>
-        <div class="tasks">
-            <label><input type="checkbox"> Conferir contrato de locação e seguro do carro</label><br>
-            <label><input type="checkbox"> Verificar documentos e revisão do carro</label><br>
-            <label><input type="checkbox"> Ajustar GPS com a rota</label><br>
-            <label><input type="checkbox"> Preparar lanches e água</label><br>
-            <label><input type="checkbox"> Separar kit de primeiros socorros e medicamentos</label><br>
-            <label><input type="checkbox"> Baixar playlist para a viagem 🎶</label><br>
-            <label><input type="checkbox"> Conferir previsão do tempo e roupas adequadas</label><br>
+        
+        <h2 class="subtitle">Saída: Brasília - 27 de Dezembro</h2>
+        
+        <div class="media-section">
+            <!-- Spotify -->
+            <iframe style="border-radius:12px" 
+                    src="https://open.spotify.com/embed/playlist/23O5idrZf3fjjEYYEs53e3?utm_source=generator&theme=0" 
+                    width="250" height="60" 
+                    frameBorder="0" 
+                    allowfullscreen="" 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy"></iframe>
         </div>
 
-        <!-- Playlist do Spotify -->
-        <h3>Playlist para a Viagem 🎶</h3>
-        <iframe src="https://open.spotify.com/embed/playlist/23O5idrZf3fjjEYYEs53e3?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <div class="section">
+            <h3>Cronômetro até a Partida</h3>
+            <div class="timer" id="countdown">Carregando...</div>
+        </div>
 
-        <!-- Mapa da Rota -->
-        <h3>Rota para o Destino 📍</h3>
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3814299.1387592115!2d-45.45619173147977!3d-12.05164536655016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x70e3400b34deaf6d%3A0xf8e0f594a7b5a2a0!2sBras%C3%ADlia%20-%20DF!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="section">
+            <h3>Participantes da Viagem</h3>
+            <p class="list-item">Welton <span class="heart">❤️</span> Roberta</p>
+            <p class="list-item">Chatinha <span class="heart">❤️</span> Fernandão</p>
+        </div>
+
+        <div class="section">
+            <h3>Destino Final</h3>
+            <p class="list-item">Ilhéus, Bahia - Praia, Sol e Diversão!</p>
+        </div>
+
+        <div class="section">
+            <h3>Informações Extras</h3>
+            <p>Roteiro: Saída de Brasília no dia 27 de Dezembro pela manhã. Chegada estimada em Ilhéus no dia seguinte, para aproveitar dias de praia e relaxamento!</p>
+        </div>
+
+        <!-- Mapa do Google com a rota -->
+        <div class="section">
+            <h3>Rota até Ilhéus</h3>
+            <iframe 
+                src="https://www.google.com/maps/embed/v1/directions?key=YOUR_API_KEY&origin=Brasília&destination=Ilhéus&mode=driving" 
+                width="100%" 
+                height="350" 
+                frameborder="0" 
+                style="border:0" 
+                allowfullscreen 
+                aria-hidden="false" 
+                tabindex="0">
+            </iframe>
         </div>
     </div>
 
@@ -130,7 +160,10 @@
             }
         }
 
+        // Atualize o cronômetro imediatamente ao carregar a página
         atualizarCronometro();
+
+        // Depois disso, continue atualizando a cada segundo
         const intervalo = setInterval(atualizarCronometro, 1000);
     </script>
 </body>
