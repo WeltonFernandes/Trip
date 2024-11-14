@@ -14,11 +14,10 @@
             justify-content: center;
             align-items: center;
             background-color: #f0f8ff;
-            position: relative;
         }
         .container {
             width: 90%;
-            max-width: 900px;
+            max-width: 600px;
             background-color: white;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -28,7 +27,7 @@
 
         /* Banner com imagem de fundo */
         .banner {
-            background-image: url('https://acrosstheuniverse.blog.br/wp-content/uploads/2020/02/Praia-em-Ilhe%CC%81us.jpg'); /* URL de uma imagem de estrada/praia */
+            background-image: url('https://acrosstheuniverse.blog.br/wp-content/uploads/2020/02/Praia-em-Ilhe%CC%81us.jpg');
             background-size: cover;
             background-position: center;
             padding: 50px 20px;
@@ -49,44 +48,17 @@
             font-size: 1.5em;
             font-weight: bold;
             color: #2e8b57;
-            background-image: url('https://example.com/praia.jpg'); /* URL de uma imagem de praia */
-            background-size: cover;
-            background-position: center;
             padding: 20px;
             border-radius: 10px;
-            color: white;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
         }
 
-        /* Estilo para lista de participantes */
-        .list-item {
-            font-size: 1.1em;
-            margin: 5px 0;
+        /* Estilo para lista de tarefas */
+        .tasks {
+            text-align: left;
+            padding: 20px;
         }
-        .heart {
-            color: red;
-        }
-
-        /* Fundo e espaçamento para outras seções */
-        .section h3 {
-            font-size: 1.3em;
-            color: #2e8b57;
-        }
-
-        /* Estilos para o mapa e Spotify */
-        .map-container, .spotify-container {
-            position: relative;
-            margin-top: 20px;
-        }
-
-        /* Ajustando tamanhos dos iframes */
-        iframe {
-            border-radius: 12px;
-        }
-
-        /* Estilo para o Spotify no canto inferior */
-        .spotify-container {
-            margin-top: 20px;
+        .tasks input[type="checkbox"] {
+            margin-right: 10px;
         }
     </style>
 </head>
@@ -97,12 +69,7 @@
         </div>
         
         <h2 class="subtitle">Saída: Brasília - 27 de Dezembro</h2>
-
-        <!-- Playlist do Spotify abaixo de "Saída: Brasília" -->
-        <div class="spotify-container">
-            <iframe src="https://open.spotify.com/embed/playlist/23O5idrZf3fjjEYYEs53e3?utm_source=generator&theme=0" width="300" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </div>
-
+        
         <div class="section">
             <h3>Cronômetro até a Partida</h3>
             <div class="timer" id="countdown">Carregando...</div>
@@ -110,8 +77,8 @@
 
         <div class="section">
             <h3>Participantes da Viagem</h3>
-            <p class="list-item">Welton <span class="heart">❤️</span> Roberta</p>
-            <p class="list-item">Chatinha <span class="heart">❤️</span> Fernandão</p>
+            <p class="list-item">Welton ❤️ Roberta</p>
+            <p class="list-item">Chatinha ❤️ Fernandão</p>
         </div>
 
         <div class="section">
@@ -124,9 +91,15 @@
             <p>Roteiro: Saída de Brasília no dia 27 de Dezembro pela manhã. Chegada estimada em Ilhéus no dia seguinte, para aproveitar dias de praia e relaxamento!</p>
         </div>
 
-        <!-- Mapa com a rota ajustada, agora com link do Google Maps -->
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=...PzLPTZYnGN6ecDoPA" width="75%" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <div class="section tasks">
+            <h3>Lista de Atividades e Tarefas de Viagem 📋</h3>
+            <label><input type="checkbox"> Conferir contrato de locação e seguro do carro</label><br>
+            <label><input type="checkbox"> Verificar documentos e revisão do carro</label><br>
+            <label><input type="checkbox"> Ajustar GPS com a rota</label><br>
+            <label><input type="checkbox"> Preparar lanches e água</label><br>
+            <label><input type="checkbox"> Separar kit de primeiros socorros e medicamentos</label><br>
+            <label><input type="checkbox"> Baixar playlist para a viagem 🎶</label><br>
+            <label><input type="checkbox"> Conferir previsão do tempo e roupas adequadas</label><br>
         </div>
     </div>
 
@@ -151,10 +124,7 @@
             }
         }
 
-        // Atualize o cronômetro imediatamente ao carregar a página
         atualizarCronometro();
-
-        // Depois disso, continue atualizando a cada segundo
         const intervalo = setInterval(atualizarCronometro, 1000);
     </script>
 </body>
