@@ -1,6 +1,3 @@
-Aqui está a versão completa do código com o mapa e a playlist de Spotify, além da lista de tarefas para a viagem. Vou ajustar o código para garantir que todos os elementos estejam corretamente posicionados e visíveis:
-
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -8,109 +5,90 @@ Aqui está a versão completa do código com o mapa e a playlist de Spotify, al�
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viagem para Ilhéus</title>
     <style>
-        /* Estilos gerais */
         body {
             font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f0f8ff;
-        }
-        .container {
-            width: 90%;
-            max-width: 600px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
             text-align: center;
-            padding-bottom: 20px;
         }
 
-        /* Banner com imagem de fundo */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
         .banner {
             background-image: url('https://acrosstheuniverse.blog.br/wp-content/uploads/2020/02/Praia-em-Ilhe%CC%81us.jpg');
             background-size: cover;
             background-position: center;
-            padding: 50px 20px;
+            padding: 60px;
             color: white;
         }
+
         .banner h1 {
-            font-size: 1.8em;
-            margin: 0;
-            color: #ffffff;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-        }
-
-        /* Seção de cronômetro */
-        .section {
-            padding: 20px;
-        }
-        .timer {
-            font-size: 1.5em;
+            font-size: 2.5em;
             font-weight: bold;
-            color: #2e8b57;
-            padding: 20px;
-            border-radius: 10px;
         }
 
-        /* Estilo para lista de tarefas */
+        h2, h3 {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        .countdown {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: green;
+            margin-top: 20px;
+        }
+
+        iframe {
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
         .tasks {
             text-align: left;
-            padding: 20px;
+            margin-top: 30px;
+            padding-left: 20px;
         }
-        .tasks input[type="checkbox"] {
+
+        .tasks input {
             margin-right: 10px;
         }
 
-        /* Estilo para os elementos de mídia */
-        .media {
+        .map-container {
             margin-top: 20px;
-        }
-        iframe {
-            width: 100%;
-            border-radius: 12px;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- Banner -->
         <div class="banner">
             <h1>🌞 Aêêê, Caramba! A grande viagem tá chegando! 🚗🌴</h1>
         </div>
-        
-        <h2 class="subtitle">Saída: Brasília - 27 de Dezembro</h2>
 
-        <!-- Seção de cronômetro -->
-        <div class="section">
-            <h3>Cronômetro até a Partida</h3>
-            <div class="timer" id="countdown">Carregando...</div>
-        </div>
+        <!-- Saída e cronômetro -->
+        <h2>Saída: Brasília - 27 de Dezembro</h2>
+        <div class="countdown" id="countdown">Carregando...</div>
 
-        <!-- Lista de participantes -->
-        <div class="section">
-            <h3>Participantes da Viagem</h3>
-            <p class="list-item">Welton ❤️ Roberta</p>
-            <p class="list-item">Gaby ❤️ Fernandão</p>
-        </div>
+        <!-- Participantes -->
+        <h3>Participantes da Viagem</h3>
+        <p>Welton ❤️ Roberta</p>
+        <p>Gaby ❤️ Fernandão</p>
 
-        <!-- Destino final -->
-        <div class="section">
-            <h3>Destino Final</h3>
-            <p class="list-item">Ilhéus, Bahia - Praia, Sol e Diversão!</p>
-        </div>
+        <!-- Destino -->
+        <h3>Destino Final</h3>
+        <p>Ilhéus, Bahia - Praia, Sol e Diversão!</p>
 
-        <!-- Informações extras -->
-        <div class="section">
-            <h3>Informações Extras</h3>
-            <p>Roteiro: Saída de Brasília no dia 27 de Dezembro pela manhã. Chegada estimada em Ilhéus no dia seguinte, para aproveitar dias de praia e relaxamento!</p>
-        </div>
-
-        <!-- Lista de atividades e tarefas de viagem -->
-        <div class="section tasks">
-            <h3>Lista de Atividades e Tarefas de Viagem 📋</h3>
+        <!-- Lista de atividades -->
+        <h3>Lista de Atividades de Viagem 📋</h3>
+        <div class="tasks">
             <label><input type="checkbox"> Conferir contrato de locação e seguro do carro</label><br>
             <label><input type="checkbox"> Verificar documentos e revisão do carro</label><br>
             <label><input type="checkbox"> Ajustar GPS com a rota</label><br>
@@ -120,20 +98,17 @@ Aqui está a versão completa do código com o mapa e a playlist de Spotify, al�
             <label><input type="checkbox"> Conferir previsão do tempo e roupas adequadas</label><br>
         </div>
 
-        <!-- Spotify embed no canto superior direito -->
-        <div class="media">
-            <h3>Música para a Estrada 🎶</h3>
-            <iframe src="https://open.spotify.com/embed/playlist/23O5idrZf3fjjEYYEs53e3?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </div>
+        <!-- Playlist do Spotify -->
+        <h3>Playlist para a Viagem 🎶</h3>
+        <iframe src="https://open.spotify.com/embed/playlist/23O5idrZf3fjjEYYEs53e3?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-        <!-- Mapa embed abaixo de Destino Final -->
-        <div class="media">
-            <h3>Rota para o Destino 📍</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3814299.1387592115!2d-45.45619173147977!3d-12.05164536655016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x70e3400b34deaf6d%3A0xf8e0f594a7b5a2a0!2sBras%C3%ADlia%20-%20DF!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <!-- Mapa da Rota -->
+        <h3>Rota para o Destino 📍</h3>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3814299.1387592115!2d-45.45619173147977!3d-12.05164536655016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x70e3400b34deaf6d%3A0xf8e0f594a7b5a2a0!2sBras%C3%ADlia%20-%20DF!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </div>
 
-    <!-- Script do cronômetro -->
     <script>
         function atualizarCronometro() {
             const dataDestino = new Date("December 27, 2024 00:00:00").getTime();
@@ -160,12 +135,3 @@ Aqui está a versão completa do código com o mapa e a playlist de Spotify, al�
     </script>
 </body>
 </html>
-```
-
-### Explicações e ajustes
-
-1. **Playlist do Spotify**: Está logo abaixo de "Saída: Brasília - 27 de Dezembro".
-2. **Mapa com a rota**: Atualizado para o link fornecido, abaixo de "Destino Final" e redimensionado a 300px de altura para ocupar menos espaço.
-3. **Lista de atividades**: Mantida com todos os itens sugeridos para a viagem, com opções de marcar conforme realizados.
-
-Esse layout deve manter o design alinhado ao que você pediu e torná-lo fácil de usar e interativo!
