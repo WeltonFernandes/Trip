@@ -5,19 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viagem para Porto Seguro</title>
     <style>
-        /* Estilos para a página */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             background-color: #f0f8ff;
         }
         .container {
             width: 90%;
-            max-width: 600px;
+            max-width: 800px;
+            margin: 0 auto;
             background-color: white;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -26,17 +23,17 @@
         }
 
         .banner {
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e1/Porto_Seguro_Bahia_Brazil.jpg'); /* URL da imagem para Porto Seguro */
+            background-image: url('https://www.airbnb.com.br/rooms/1043378341382885732');
             background-size: cover;
             background-position: center;
-            padding: 50px 20px;
             color: white;
-        }
-        .banner h1 {
-            font-size: 1.8em;
-            margin: 0;
-            color: #ffffff;
+            padding: 50px 20px;
             text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .banner h1 {
+            font-size: 2em;
+            margin: 0;
         }
 
         .section {
@@ -47,25 +44,42 @@
             font-size: 1.5em;
             font-weight: bold;
             color: #2e8b57;
-            padding: 20px;
-            border-radius: 10px;
-            color: white;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+            margin: 20px 0;
         }
 
         iframe {
             border-radius: 12px;
             margin: 20px 0;
         }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #2e8b57;
+            color: white;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="banner">
-            <h1>🌞 A grande viagem para Porto Seguro! 🚗🌴</h1>
+            <h1>🌞 Rumo a Porto Seguro! 🚗</h1>
         </div>
         
-        <h2 class="subtitle">Saída: Brasília - 28 de Dezembro às 03:00</h2>
+        <h2>Saída: Brasília - 28 de Dezembro às 03:00</h2>
 
         <div class="section">
             <h3>Cronômetro até a Partida</h3>
@@ -75,16 +89,69 @@
         <div class="section">
             <h3>Destino Final</h3>
             <p>Porto Seguro, Bahia - Sol, Praia e Diversão!</p>
-            <!-- Google Maps -->
             <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3676508.000000000!2d-40.479312345!3d-14.717999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m16!3e0!4m3!3m2!1d-15.7801!2d-47.9292!4m10!1s0x740a82b1f40d53cd%3A0x54!3m8!1m0!1m5!1m1!1s0x3da72ebffffdff%3A0xa!2m2!1d-39.06239!2d-16.44333!5e0!3m2!1spt-BR!2sbr!4v1234567890123"
                 width="100%" 
                 height="300" 
                 style="border:0;" 
                 allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
+                loading="lazy">
             </iframe>
+        </div>
+
+        <div class="section">
+            <h3>Roteiro de Paradas</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Origem</th>
+                        <th>Destino</th>
+                        <th>KM</th>
+                        <th>Horário de Saída</th>
+                        <th>Hora de Chegada</th>
+                        <th>Tempo Estimado</th>
+                        <th>Parada</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gama</td>
+                        <td>Posto Rosário</td>
+                        <td>358</td>
+                        <td>04:00</td>
+                        <td>08:00</td>
+                        <td>4h00</td>
+                        <td>1 Hora</td>
+                    </tr>
+                    <tr>
+                        <td>Posto Rosário</td>
+                        <td>Bom Jesus da Lapa</td>
+                        <td>343</td>
+                        <td>09:00</td>
+                        <td>13:00</td>
+                        <td>4h00</td>
+                        <td>1 Hora</td>
+                    </tr>
+                    <tr>
+                        <td>Bom Jesus da Lapa</td>
+                        <td>Vitória da Conquista</td>
+                        <td>378</td>
+                        <td>14:00</td>
+                        <td>18:00</td>
+                        <td>4h00</td>
+                        <td>Pernoite</td>
+                    </tr>
+                    <tr>
+                        <td>Vitória da Conquista</td>
+                        <td>Porto Seguro</td>
+                        <td>385</td>
+                        <td>07:00</td>
+                        <td>12:00</td>
+                        <td>5h00</td>
+                        <td>N/D</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
         <div class="section">
